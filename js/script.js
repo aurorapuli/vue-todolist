@@ -55,7 +55,7 @@ createApp({
 
         delTask(indice) {
 
-            this.todos.slice(indice, 1);
+            this.todos.splice(indice, 1);
 
             console.log(this.todos);
 
