@@ -53,9 +53,9 @@ createApp({
             console.log(this.todos);
         },
 
-        delTask(i) {
+        delTask(indice) {
 
-            this.todos.slice(i, 1);
+            this.todos.slice(indice, 1);
 
             console.log(this.todos);
 
