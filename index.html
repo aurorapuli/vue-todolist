@@ -23,7 +23,8 @@
             </div>
             <div class="bottom">
                 <ul>
-                    <li>ciao
+                    <li v-for="task in todos">
+                        {{task.text}}
                         <i class="fa-solid fa-xmark"></i>
                     </li>
                 </ul>
