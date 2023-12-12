@@ -12,12 +12,19 @@
 
 
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
 
-    data(){
-        return{
+    data() {
+        return {
+
+            message:{
+                text: "",
+                done: false
+
+            },
+
             todos: [
                 {
                     text: 'Fare i compiti',
@@ -34,7 +41,20 @@ createApp({
             ]
 
         }
+       
+    },
+    methods: {
+
+        addTask(){
+            this.todos.unshift(this.message) 
+
+            this.message = "";
+            
+            console.log(this.todos);
+        }
+
     }
 
 
 }).mount('#app');
+
