@@ -23,9 +23,9 @@
             </div>
             <div class="bottom">
                 <ul>
-                    <li v-for="task in todos">
+                    <li v-for="(task, i) in todos" :key="i" :class="(task.done === true ? 'line-trough' : '')">
                         {{task.text}}
-                        <i class="fa-solid fa-xmark"></i>
+                        <i class="fa-solid fa-xmark" @click="delTask"></i>
                     </li>
                 </ul>
             </div>

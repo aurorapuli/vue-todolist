@@ -19,7 +19,7 @@ createApp({
     data() {
         return {
 
-            message:{
+            message: {
                 text: "",
                 done: false
 
@@ -41,16 +41,24 @@ createApp({
             ]
 
         }
-       
+
     },
     methods: {
 
-        addTask(){
-            this.todos.unshift(this.message) 
+        addTask() {
+            this.todos.unshift(this.message)
 
             this.message = "";
-            
+
             console.log(this.todos);
+        },
+
+        delTask(i) {
+
+            this.todos.slice(i, 1);
+
+            console.log(this.todos);
+
         }
 
     }
