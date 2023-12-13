@@ -19,11 +19,7 @@ createApp({
     data() {
         return {
 
-            message: {
-                text: "",
-                done: false
-
-            },
+            message: "",
 
             todos: [
                 {
@@ -46,11 +42,11 @@ createApp({
     methods: {
 
         addTask() {
-            this.todos.unshift(this.message)
+            this.todos.unshift({text: this.message, done: false});
 
-            this.message = "";
+            this.message= "";
 
-            console.log(this.todos);
+            console.log(this.message);
         },
 
         delTask(indice) {
